@@ -300,12 +300,5 @@ export async function getProducts(page: number, searchTerm?: string) {
 
   const data = result.slice((page - 1) * 10, page * 10);
 
-  console.log(
-    `🚀${new Date().toString()} ~ getProducts ~ data:`,
-    page,
-    searchTerm,
-    data,
-  );
-
   return data;
 }

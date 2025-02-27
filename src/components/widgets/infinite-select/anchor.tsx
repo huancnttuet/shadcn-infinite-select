@@ -36,16 +36,16 @@ const Anchor = ({ next }: Props) => {
         observer.unobserve(loader.current);
       }
     };
-  }, [hasMore]);
+  }, []);
 
   return (
     <>
-      {hasMore && (
+      {
         <div
-          className='flex justify-center'
+          className={`flex justify-center ${!hasMore ? 'hidden' : ''}`}
           ref={loader}
           style={{ height: '10px', backgroundColor: 'transparent' }}></div>
-      )}
+      }
     </>
   );
 };
